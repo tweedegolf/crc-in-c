@@ -25,13 +25,13 @@
 4. Define an extern (fill in the argument and return types)
     ```rust
     extern "C" {
-        fn CRC32( ... ) -> ...;
+        fn CRC32( ... ) -> ...; // hint: https://doc.rust-lang.org/std/os/raw
     }
     ```
 5. Create a rust wrapper that calls the extern function
-    ```
+    ```rust
     fn crc32( ... ) -> ... { 
-        ...
+        ... // (hints: `unsafe`, `.as_ptr()`, `.len()`)
     }
     ```
 
